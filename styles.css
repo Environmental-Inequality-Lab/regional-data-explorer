@@ -1,0 +1,220 @@
+/* css styles */
+
+/* === Import Fonts === */
+/* latin-ext */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/anton/v27/1Ptgg87LROyAm3K9-C8CSKlvPfE.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  font-display: swap;
+}
+/* latin */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/anton/v27/1Ptgg87LROyAm3Kz-C8CSKlv.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
+}
+
+/* Keep Google font imports for body and headings */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=League+Gothic&display=swap');
+
+/* === Design tokens / variables === */
+:root {
+  --brand: #601215; /* primary maroon */
+  --brand-hover: #a83232;
+  /* Primary text color for most copy */
+  --text-color: #222222;
+  /* Muted background used for side panels and subtle surfaces */
+  --muted-bg: #f3f4f6;
+  /* Panel/border subtle color (uses alpha) */
+  --panel-border: rgba(0,0,0,0.06);
+  /* Form input border color */
+  --input-border: #e5e7eb;
+  /* Font stacks (body and heading). Keep Anton available for display headings. */
+  --body-font: 'Lato', sans-serif;
+  --heading-font: 'Anton', 'League Gothic', sans-serif;
+  /* RGB form of the brand color for use in rgba() where needed (format: R,G,B) */
+  --brand-rgb: 96,18,21;
+}
+
+/* === Base Typography === */
+body {
+  font-family: var(--body-font);
+  color: var(--text-color); /* readable dark gray for text */
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--brand); /* maroon headers */
+}
+
+/* === Navbar Styling === */
+.navbar {
+  background-color: var(--brand) !important; /* maroon background */
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #ffffff !important; /* white text */
+  font-family: var(--body-font);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-brand:hover {
+  color: #ffffff !important; /* white text */
+}
+
+/* Increase navbar logo size — use stronger selectors and !important to override theme rules */
+.quarto-navbar .navbar-brand img,
+.quarto-navbar .brand img,
+.quarto-navbar .navbar-logo img,
+.quarto-nav .navbar-brand img,
+.navbar .navbar-brand img,
+.navbar-brand img,
+header .navbar-brand img {
+  height: 72px !important;   /* adjust this value to taste */
+  max-height: 72px !important;
+  width: auto !important;    /* preserve aspect ratio */
+  display: inline-block !important;
+}
+
+/* Slightly smaller logo on narrow screens */
+@media (max-width: 700px) {
+  .quarto-navbar .navbar-brand img,
+  .navbar-brand img,
+  header .navbar-brand img {
+    height: 44px !important;
+    max-height: 44px !important;
+  }
+}
+
+
+/* === Link Colors === */
+a {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--brand-hover); /* lighter maroon hover */
+  text-decoration: underline;
+}
+
+/* === Table of Contents === */
+#TOC a {
+  color: var(--brand);
+}
+
+/* === Button styles (key tokens from sister site) === */
+.btn,
+.button,
+.sqs-button-element--primary,
+.sqs-button-element--primary.sqs-editable-button {
+  background: var(--brand);
+  color: #fff;
+  border: 0;
+  padding: 0.55rem 0.9rem;
+  border-radius: 6px;
+  font-family: var(--body-font);
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+.sqs-button-element--primary:hover,
+.btn:hover,
+.button:hover {
+  background: var(--brand-hover);
+}
+
+/* === Form controls (compact, consistent with sister site) === */
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+  border: 1px solid var(--input-border);
+  padding: 0.5rem 0.6rem;
+  border-radius: 6px;
+  font-family: var(--body-font);
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  /* use brand rgb with alpha for a subtle focus ring */
+  box-shadow: 0 0 0 3px rgba(var(--brand-rgb), 0.06);
+  border-color: var(--brand);
+}
+
+/* Hide the site title in the navbar (Quarto theme shows the website title by default) */
+.quarto-navbar .site-title,
+.quarto-navbar .navbar-title,
+.quarto-nav .site-title,
+.navbar .site-title,
+.navbar .navbar-title,
+header .site-title,
+header .navbar-title {
+  display: none !important;
+}
+
+/* If hiding the title leaves extra left padding, remove it for the brand area */
+.quarto-navbar .navbar-brand,
+.navbar .navbar-brand {
+  padding-left: 0 !important;
+}
+
+/* === Index page: full-bleed two-column layout === */
+.index-full { margin: 0; padding: 0; max-width: none; width: 100%; }
+.index-full .columns { display:flex; gap:0; align-items:stretch; max-width: 100%; margin: 0; }
+.index-full .columns .column:first-child { flex: 0 0 33%; max-width: 33%; background: var(--muted-bg); padding: 1rem; box-sizing: border-box; }
+.index-full .columns .column:last-child { flex: 1 0 67%; box-sizing: border-box; padding: 0; }
+.index-full .columns .column { min-width: 0; }
+
+
+@media (max-width: 900px) {
+  .index-full .columns { flex-direction: column; }
+  .index-full .columns .column:first-child { max-width: none; }
+  .index-full .columns .column:last-child .leaflet-container { height: 480px !important; }
+}
+
+/* === Autocomplete styles for index page (scoped to .index-full) === */
+/* container is positioned relative to the search wrapper; the list is absolute positioned to match width */
+.index-full #state-search-inline { position: relative; margin-top: 0.25rem; }
+.index-full #state-autocomplete-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1200;
+  max-height: 14rem;
+  overflow-y: auto;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.08);
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: #ffffff;
+}
+.index-full #state-autocomplete-list .autocomplete-item {
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  border-top: 1px solid var(--input-border);
+  background: transparent;
+}
+.index-full #state-autocomplete-list .autocomplete-item:first-child { border-top: none; }
+.index-full #state-autocomplete-list .autocomplete-item:hover,
+.index-full #state-autocomplete-list .autocomplete-item.active {
+  background: var(--muted-bg);
+  color: var(--text-color);
+}
