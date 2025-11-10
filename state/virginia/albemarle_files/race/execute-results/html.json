@@ -1,0 +1,17 @@
+{
+  "hash": "0fc57d8c52ff4f8310f046753ff1d5f0",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Albemarle County, Virginia — Race and Ethnicity\"\nformat: html\nparams:\n  county_code: \"51003\"\n  county_name: \"Albemarle County\"\n  state_code: \"51\"\n  git_path: \"/Users/elizabethshiker/The Lab Dropbox/Elizabeth Shiker/GitHub/county_html_creation/\"\n  data_path: \"/Users/elizabethshiker/The Lab Dropbox/Elizabeth Shiker/gridded_eif_data/\"\n  font_path: \"/Users/elizabethshiker/Downloads/Lato,League_Gothic/Lato/Lato-Regular.ttf\"\nexecute:\n  echo: false\n  warning: false\n  message: false\n---\n\n[Overview](index.html) | [Race](race.html) | [Income](income.html) | [PM2.5](pm25.html)\n\n# Race and Ethnicity\n\n## Local and National Trends in Racial and Ethnic Population Size and Share (2000-2024)\n\n\n::: {.cell}\n\n:::\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](race_files/figure-html/sparkline table-1.png){width=100%}\n:::\n:::\n\n\n\n::: {.cell}\n\n:::\n\n\n## Comparison of 2024 Racial Shares\n\nWhite individuals made up **71.9%** of the **Albemarle County** population, compared to **55.0%** nationwide.\n\nBlack individuals made up **8.2%** of the **Albemarle County** population, compared to **11.6%** nationwide.\n\nHispanic individuals made up **4.5%** of the **Albemarle County** population, compared to **15.8%** nationwide.\n\nAsian individuals made up **3%** of the **Albemarle County** population, compared to **4.1%** nationwide.\n\nAmerican Indian and Alaska Native individuals made up **0.2%** of the **Albemarle County** population, compared to **0.8%** nationwide.\n\n## Population Maps by Race and Ethnicity (2024)\n\n\n::: {.cell}\n\n:::\n\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![White (2024)](images/race_map_2024_White.png){fig-align='center' width=48%}\n:::\n\n::: {.cell-output-display}\n![Black (2024)](images/race_map_2024_Black.png){fig-align='center' width=48%}\n:::\n\n::: {.cell-output-display}\n![Hispanic (2024)](images/race_map_2024_Hispanic.png){fig-align='center' width=48%}\n:::\n\n::: {.cell-output-display}\n![Asian (2024)](images/race_map_2024_Asian.png){fig-align='center' width=48%}\n:::\n\n::: {.cell-output-display}\n![AIAN (2024)](images/race_map_2024_AIAN.png){fig-align='center' width=48%}\n:::\n:::\n\n\nNotes: Red-yellow hexagons represent higher concentrations of each racial group and blue-purple hexagons represent lower concentrations. The scales vary to reflect differences in overall population levels across groups.\n\n## Race and Ethnicity Definitions\n\nIndividuals are characterized as Hispanic, Non-Hispanic White, Non-Hispanic Black, Non-Hispanic Asian, and Non-Hispanic American Indian and Alaska Native (AIAN). A residual category is constructed containing all Non-Hispanic Other, but is not reported separately in the statistics.\n",
+    "supporting": [
+      "race_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

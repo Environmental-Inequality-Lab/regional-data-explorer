@@ -1,0 +1,17 @@
+{
+  "hash": "54461356d7a674c8acc4f2bcf1890fd6",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Albemarle County, Virginia — Overview\"\nformat: html\nparams:\n  county_code: \"51003\"\n  county_name: \"Albemarle County\"\n  state_code: \"51\"\n  git_path: \"/Users/elizabethshiker/The Lab Dropbox/Elizabeth Shiker/GitHub/county_html_creation/\"\n  data_path: \"/Users/elizabethshiker/The Lab Dropbox/Elizabeth Shiker/gridded_eif_data/\"\n  font_path: \"/Users/elizabethshiker/Downloads/Lato,League_Gothic/Lato/Lato-Regular.ttf\"\nexecute:\n  echo: false\n  warning: false\n  message: false\n---\n\n[Overview](index.html) | [Race](race.html) | [Income](income.html) | [PM2.5](pm25.html)\n\n# Population Trends and Age Dynamics\n\n\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![Population density (hex grid), 2024](index_files/figure-html/pop_map_hex-1.png){fig-align='center' width=100%}\n:::\n:::\n\n\nNotes: Map uses a hexagonal grid to show population counts within each cell. Population is represented on a log scale, with blue-purple hexagons indicating fewer people and red-yellow hexagons indicating more. Legend is restricted to the 2nd–98th percentiles. Data source: Gridded EIF.\n\n\n\n## Where People Live\n\nIn 2024, Albemarle County was home to 107,686 people. In the map above, darker blue areas indicate less populated regions. Warmer colors indicate more populated areas.\n\nThe region had a population density of 58 people per square kilometer, which is more dense than the national average of 37 per square kilometer.\n\n## Population Trends\n\nThe population grew by 39,170 people between 2000 and 2024, with an average annual growth rate of 1.9%. This is faster than the national average growth rate of 0.8%.\n\nFrom 2000-2010, the population grew at an average annual rate of 2.53%. From 2010-2020, it grew at a rate of 1.62% annually. And from 2020-2024, it grew by 1.05% annually.\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![Population over time (2000–2024)](index_files/figure-html/pop_over_time-1.png){fig-align='center' width=100%}\n:::\n:::\n\n\nNotes: Line chart shows annual population from 2000 to 2024. Population is shown on the vertical axis; year is on the horizontal axis. Data source: Gridded EIF.\n\n## Age Dynamics\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![Age shares over time (2000–2024)](index_files/figure-html/age_share-1.png){fig-align='center' width=100%}\n:::\n:::\n\n\nNotes: Line chart shows the share of the population in three age groups—under 18, ages 19–65, and over 65—for each year from 2000 to 2024. The vertical axis shows population share as a percentage. Data source: Gridded EIF.\n\nIn 2024, 19% of the Albemarle County population was under 18, a lower share than the US. The under-18 population was declining.\n\nIn 2024, 58% of the Albemarle County population was aged 19-65, a lower share than the US. The 19-65 population was declining.\n\nIn 2024, 21% of the Albemarle County population was over 65, a higher share than the US. The over-65 population was growing.\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
