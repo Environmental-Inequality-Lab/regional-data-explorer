@@ -26,7 +26,7 @@
 /* === Design tokens / variables === */
 :root {
   --brand: #601215; /* primary maroon */
-  --brand-hover: #a83232;
+  --brand-hover: #A83232;
   /* Primary text color for most copy */
   --text-color: #222222;
   /* Muted background used for side panels and subtle surfaces */
@@ -131,7 +131,7 @@ header .navbar-brand img {
     display: block;
   }
 }
-{ changed code }
+
 
 /* === Link Colors === */
 a {
@@ -316,3 +316,38 @@ footer, .page-footer {
   line-height: 1;        /* tight single line */
   white-space: wrap;   /* ensures text stays on one line */
 }
+/* === Tab Styling (Match Brand Color) === */
+.panel-tabset .nav-tabs .nav-link {
+  color: var(--brand);
+  border-color: transparent;
+  font-weight: bold;
+}
+
+.panel-tabset .nav-tabs .nav-link:hover {
+  color: var(--brand-hover);
+  background-color: var(--brand-hover);
+  border-color: var(--brand-hover);
+  color: #fff;
+}
+
+.panel-tabset .nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: var(--brand-hover);
+  border-color: var(--brand-hover);
+  font-weight: bold;
+}
+
+.panel-tabset .nav-tabs {
+  border-bottom-color: var(--brand);
+}
+
+/* Responsive table container: preserves column sizes, allows horizontal scroll on small screens only */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+}
+
+/* (Reverted) Removed widget/table overflow rules to restore previous layout */
+
+/* (Reverted) Remove aggressive compacting of reactable headers/cells to restore original spacing */
