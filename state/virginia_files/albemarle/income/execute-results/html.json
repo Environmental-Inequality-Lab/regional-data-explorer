@@ -1,0 +1,17 @@
+{
+  "hash": "5bb46d455a796d6460f67c55c3d192c9",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Albemarle County, Virginia — Income\"\nformat: html\nparams:\n  county_code: \"51003\"\n  county_name: \"Albemarle County\"\n  state_code: \"51\"\n  git_path: \"/Users/elizabethshiker/The Lab Dropbox/Elizabeth Shiker/GitHub/county_html_creation/\"\n  data_path: \"/Users/elizabethshiker/The Lab Dropbox/Elizabeth Shiker/gridded_eif_data/\"\n  font_path: \"/Users/elizabethshiker/Downloads/Lato,League_Gothic/Lato/Lato-Regular.ttf\"\nexecute:\n  echo: false\n  warning: false\n  message: false\n---\n\n[Overview](index.html) | [Race](race.html) | [Income](income.html) | [PM2.5](pm25.html)\n\n# Adjusted Gross Income\n\n\n\n## Trends and Shares\n\nThe average household income in 2024 was $**213,759**. The average annual growth rate was **1.3%** compared with the US annual growth rate of 3.7%.\n\n## Albemarle County Income Decile Distribution\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![Income decile distribution (2024)](income_files/figure-html/income-1.png){fig-align='center' width=100%}\n:::\n:::\n\n\nNotes: The figure shows the share of the Albemarle County population within each decile of the national income distribution.\n\n### Income Deciles and AGI\n\nIncome deciles divide the national population into ten equally sized income bins. The first decile reflects the 10% of the US population with the lowest income, while the 10th decile reflects the 10% of the population with the highest income.\n\nAdjusted Gross Income (AGI) is defined as the total gross income per household minus specific adjustments.\n\n## AGI Growth\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](income_files/figure-html/unnamed-chunk-1-1.png){fig-align='center' width=100%}\n:::\n:::\n\n\nNotes: The table shows the average income level for each decile group in 2024. The annual growth represents the average annual change in income from 2000 to 2024.\n\n# Race and Income\n\n## Race-Income Trends and Shares\n\nThe population with the highest average income was the Asian population and the population with the lowest average income was the Black population. The population with the highest average annual income growth rate from 2000–2024 was the Asian population and the population with the lowest average annual growth rate was the Black population.\n\n## Race-Income Table\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](income_files/figure-html/unnamed-chunk-2-1.png){fig-align='center' width=100%}\n:::\n:::\n\n\nNotes: The table shows the average household income and the average growth rate over the last 25 years by race.\n\n## Race-Specific Income Distributions: Albemarle County vs. US\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![Income distributions by race: County vs U.S. (2024)](income_files/figure-html/income by race-1.png){fig-align='center' width=100%}\n:::\n:::\n\n\nNotes: The dark blue bars show the share of the population within each decile of the national income distribution for each race in Albemarle County, while the light blue bars show the income decile distributions for every race in the US.\n",
+    "supporting": [
+      "income_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
