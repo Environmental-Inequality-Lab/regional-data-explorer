@@ -317,28 +317,40 @@ footer, .page-footer {
   white-space: wrap;   /* ensures text stays on one line */
 }
 /* === Tab Styling (Match Brand Color) === */
+/* Reset Bootstrap/Quarto defaults and unify with brand maroon */
+.panel-tabset .nav-tabs {
+  border-bottom: 2px solid var(--brand);
+}
 .panel-tabset .nav-tabs .nav-link {
   color: var(--brand);
+  font-weight: 600;
+  border: 1px solid transparent;
+  background: transparent;
+  margin-right: 0.15rem;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+/* Hover (non-active): no visual change (keep base state) */
+.panel-tabset .nav-tabs .nav-link:not(.active):hover {
+  background-color: transparent;
   border-color: transparent;
-  font-weight: bold;
+  color: var(--brand);
 }
-
-.panel-tabset .nav-tabs .nav-link:hover {
-  color: var(--brand-hover);
-  background-color: var(--brand-hover);
-  border-color: var(--brand-hover);
-  color: #fff;
-}
-
+/* Active state: solid brand maroon, white text */
 .panel-tabset .nav-tabs .nav-link.active {
+  background-color: var(--brand);
   color: #fff;
-  background-color: var(--brand-hover);
-  border-color: var(--brand-hover);
-  font-weight: bold;
+  border-color: var(--brand);
+  font-weight: 700;
 }
-
-.panel-tabset .nav-tabs {
-  border-bottom-color: var(--brand);
+/* Focus ring for accessibility */
+.panel-tabset .nav-tabs .nav-link:focus-visible {
+  outline: 2px solid var(--brand-hover);
+  outline-offset: 2px;
+}
+/* Remove default underline on active hover */
+.panel-tabset .nav-tabs .nav-link.active:hover {
+  background-color: var(--brand);
+  color: #fff;
 }
 
 /* Responsive table container: preserves column sizes, allows horizontal scroll on small screens only */
@@ -351,3 +363,79 @@ footer, .page-footer {
 /* (Reverted) Removed widget/table overflow rules to restore previous layout */
 
 /* (Reverted) Remove aggressive compacting of reactable headers/cells to restore original spacing */
+
+/* === Global table scrolling (make all tables scroll horizontally if needed) === */
+/* Quarto wraps static tables in this container */
+.quarto-table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.quarto-table-container table {
+  /* Let wide tables extend and trigger horizontal scroll while small tables fill width */
+  width: max-content;
+  min-width: 100%;
+}
+
+/* htmlwidgets/reactable also live inside generic html-widget divs */
+.html-widget {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Reactable container tends to size to 100%; allow horizontal overflow when columns are wide */
+.reactable {
+  max-width: none;
+}
+
+/* gt tables (from gt package) */
+.gt_table {
+  width: max-content;
+  min-width: 100%;
+}
+
+/* Ensure any table directly in content can scroll without special wrapper */
+.quarto-content table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* === Normalize fonts inside data tables and widgets === */
+/* Reactable typography */
+.reactable, .reactable * {
+  font-family: var(--body-font) !important;
+}
+.reactable .rt-td, .reactable .rt-th {
+  font-size: 0.95rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+.reactable .rt-thead .rt-th {
+  font-weight: 700;
+}
+
+/* gt table typography */
+.gt_table, .gt_table * {
+  font-family: var(--body-font) !important;
+  font-size: 0.95rem;
+}
+
+/* Sparkline widget: match font and reduce display size to align with row height */
+.sparkline.html-widget, .sparkline, .html-widget.sparkline {
+  font-family: var(--body-font) !important;
+  font-size: 0.9em !important;
+  line-height: 1;
+}
+.sparkline canvas {
+  /* Display size (bitmap may remain larger but will be scaled cleanly) */
+  width: 80px !important;
+  height: 26px !important;
+  display: inline-block;
+}
+/* Sparkline tooltip styling (from jquery-sparkline) */
+.jqstooltip {
+  font-family: var(--body-font) !important;
+  font-size: 0.85rem !important;
+}

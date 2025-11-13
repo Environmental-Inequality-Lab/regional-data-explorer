@@ -1,0 +1,1 @@
+Sitemap: https://environmental-inequality-lab.github.io/regional-data-explorer/sitemap.xml
