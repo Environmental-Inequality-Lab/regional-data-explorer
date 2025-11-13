@@ -376,12 +376,7 @@ footer, .page-footer {
   min-width: 100%;
 }
 
-/* htmlwidgets/reactable also live inside generic html-widget divs */
-.html-widget {
-  max-width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
+
 
 /* Reactable container tends to size to 100%; allow horizontal overflow when columns are wide */
 .reactable {
